@@ -123,18 +123,18 @@ jobs:
       # Email Notification
       ######################################################
 
-      - name: 📧 Send Deployment Report
-        if: success() || failure()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: AI Deployment Report - ${{ github.repository }}
-          to: ${{ secrets.EMAIL_TO }}
-          from: ${{ secrets.EMAIL_USERNAME }}
+      # - name: 📧 Send Deployment Report
+      #   if: success() || failure()
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     server_address: smtp.gmail.com
+      #     server_port: 465
+      #     secure: true
+      #     username: ${{ secrets.EMAIL_USERNAME }}
+      #     password: ${{ secrets.EMAIL_PASSWORD }}
+      #     subject: AI Deployment Report - ${{ github.repository }}
+      #     to: ${{ secrets.EMAIL_TO }}
+      #     from: ${{ secrets.EMAIL_USERNAME }}
 
           # body: |
           #   🚀 AI Deployment Report
